@@ -86,7 +86,10 @@ body{
   animation: flash 1.5s infinite;
 }
 
-/* FOR PROJECT.HTML */
+.indent {
+  text-indent: 1em; 
+}
+
 .project-img {
     width: 300;       
     height: 400;  
@@ -94,7 +97,23 @@ body{
     object-fit: contain;    
   }
 
-/* FOR CS220.HTML */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;        
+  gap: 10px;              
+}
+
+.skill-pill {
+  background: #f1f3f5;
+  padding: 8px 16px;
+  border-radius: 999px;   
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;  
+  transition: all 0.2s ease;
+}
+
+/* FOR about me */
 .timeline {
   position: relative;
   margin: 3rem 0;
@@ -123,6 +142,13 @@ body{
   transform: translateX(0.5rem);
 }
 
+.timeline-subitem {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.timeline-subitem:hover {
+  transform: translateX(0.5rem);
+}
+
 /* Icons */
 .timeline-icon {
   flex-shrink: 0;
@@ -146,8 +172,101 @@ body{
 }
 
 .timeline-img {
-    width: 200%;       
-    overflow: hidden; 
-    object-fit: contain;    
-  }
+  width: 200%;       
+  overflow: hidden; 
+  object-fit: contain;    
+}
 
+
+/* Contact */
+.contact {
+  background: linear-gradient(135deg, #eca0cc 0%, #e982be 100%);
+  background-size: cover;
+  background-position: center;
+}
+.contact__form-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 4rem;
+  margin-top: 6rem;
+  max-width: 80rem;
+  text-align: right;
+  width: 95%;
+  border-radius: 5px;
+  margin: 5rem auto 0 auto;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__form-container {
+    padding: 3rem;
+  }
+}
+.contact__form-field {
+  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__form-field {
+    margin-bottom: 3rem;
+  }
+}
+.contact__form-label {
+  color: #666;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+}
+.contact__form-input {
+  color: #333;
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+  font-size: 1rem;
+  letter-spacing: 0px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 380;
+}
+.contact__form-input::placeholder {
+  color: #999;
+  font-weight: 380;
+  font-size: 1rem;
+}
+.contact__form-input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 380;
+  font-size: 1rem;
+}
+.contact__form-input:-ms-input-placeholder {
+  color: #999;
+  font-weight: 380;
+  font-size: 1rem;
+}
+.contact__form-input::-ms-input-placeholder {
+  color: #999;
+  font-weight: 380;
+  font-size: 1rem;
+}
+.contact__form-input:-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 380;
+  font-size: 1rem;
+}
+.contact__form-input::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 380;
+  font-size: 1rem;
+}
+.contact__btn {
+  width: 20%;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__btn {
+    width: 100%;
+  }
+}
